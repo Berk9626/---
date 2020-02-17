@@ -1,0 +1,46 @@
+﻿
+@model   IlanProjesi.Models.ArabaKonutIsModel
+@{
+	
+
+	ViewData["Title"] = "ListAraba";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model.Arabalar)
+{
+
+
+	<table class="table table-bordered">
+		<thead>
+			<tr class="table-primary">
+				
+				<hr />
+				<hr />
+				<th scope="col">Araba Id</th>
+				<th scope="col">Araba Model</th>
+				<th scope="col">Araba Fiyat</th>
+				<th scope="col">Araba Adres</th>
+				<th scope="col">Araba Açıklama</th>
+				<th scope="col">Araba Resim</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-success">
+				<td>@item.ArabaId</td>
+				<td>@item.ArabaModel</td>
+				<td>@item.ArabaFiyat</td>
+				<td>@item.ArabaAdres</td>
+				<td>@item.ArabaAcıklama</td>
+				<td><img src="@item.ArabaResim" style="width:100px; height:100px;" /></td>
+
+			</tr>
+
+		</tbody>
+	</table>
+
+
+
+}
+
